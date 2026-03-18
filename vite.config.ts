@@ -24,6 +24,20 @@ export default defineConfig(({}) => {
                 '@': path.resolve(__dirname, 'src'),
             }
         },
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    //静默警告，避免bootstrap报一大堆警告
+                    quietDeps: true,//静默所有依赖警告
+                    silenceDeprecations: [
+                        'import',//静默@import的警告
+                        'color-functions',//静默red()/blue()的警告
+                        'global-builtin',//静默mix()等函数的警告
+                        'if-function',//静默if()的警告
+                    ]
+                }
+            },
+        },
         ssgOptions: renderMode == 'ssg' ? {
             onFinished() {
                 {
