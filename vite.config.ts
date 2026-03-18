@@ -4,6 +4,7 @@ import path from 'path';
 import fs from 'fs';
 import {isDev, isProd, mode} from "./src/ts/env/packMode.node.ts";
 import renderMode from "./src/ts/env/renderMode.node.ts";
+import {createHtmlPlugin} from "vite-plugin-html";
 
 const distPath=path.resolve(__dirname, 'dist');
 
@@ -12,7 +13,12 @@ export default defineConfig(({}) => {
     console.log(`当前渲染模式：${renderMode}`);
 
     return {
-        plugins: [vue()],
+        plugins: [
+            vue(),
+            createHtmlPlugin({
+                minify: true,
+            }),
+        ],
         resolve: {
             alias: {
                 '@': path.resolve(__dirname, 'src'),
