@@ -7,7 +7,4 @@
 </template>
 
 <style scoped lang="scss">
-p {
-  color: white;
-}
 </style>

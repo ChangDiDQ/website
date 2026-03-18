@@ -9,11 +9,4 @@
 </template>
 
 <style scoped lang="scss">
-p {
-  color: white;
-}
-
-.router-link {
-  color: white;
-}
 </style>
