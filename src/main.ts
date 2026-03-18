@@ -1,5 +1,18 @@
-import { createApp } from 'vue';
-import App from './App.vue';
-import router from '@/router';
+import renderMode from "@/ts/env/renderMode.ts";
 
-createApp(App).use(router).mount('#app');
+export const createApp:any=async ()=>{
+    switch (renderMode){
+        case 'spa':
+        case 'spa-hash': {
+            const module = await import("@/main-spa.ts");
+            return module.default();
+        }
+        case 'ssg': {
+            const module = await import("@/main-ssg.ts");
+            return await module.default().createApp();
+        }
+        default:
+            throw new Error(`Unknown RENDER_MODE: ${renderMode}`);
+    }
+};
+createApp();
