@@ -9,10 +9,10 @@
       <div class="me-auto">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="#">主页</a>
+            <router-link :to="{ name: 'home'}" class="nav-link active">主页</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">维修项目</a>
+            <router-link :to="{ name: 'maintenanceList'}" class="nav-link">维修项目</router-link>
           </li>
         </ul>
       </div>
