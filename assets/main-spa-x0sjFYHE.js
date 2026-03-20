@@ -1,1 +1,0 @@
-import"./bootstrap.esm-BNUHuIZF.js";import{i as e,m as t,t as n}from"./global-color-BDp0tf_p.js";function r(){t(e).use(n).mount(`#app`)}export{r as default};
