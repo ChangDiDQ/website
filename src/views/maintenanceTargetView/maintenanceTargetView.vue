@@ -5,7 +5,8 @@ import {marked} from "marked";
 
 const targetMdFiles= import.meta.glob('@/views/maintenanceTargetView/md/**/*.md', {
   eager: true,
-  as: 'url'
+  query: '?url',
+  import: 'default',
 });
 
 const route = useRoute();
