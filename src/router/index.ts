@@ -1,5 +1,6 @@
 import {createMemoryHistory, createRouter, createWebHashHistory, createWebHistory} from 'vue-router';
 import renderMode from "@/ts/env/renderMode.ts";
+import maintenanceTargetRouter from "@/router/maintenanceTarget.router.ts";
 
 const router = createRouter({
     history: (()=>{
@@ -20,6 +21,12 @@ const router = createRouter({
             name: 'home',
             component: ()=>import("@/views/Home/Home.vue"),
         },
+        {
+            path: '/maintenancelist',
+            name: 'maintenanceList',
+            component: ()=>import('@/views/MaintenanceList/MaintenanceList.vue'),
+        },
+        ...maintenanceTargetRouter,
     ],
 });
 
