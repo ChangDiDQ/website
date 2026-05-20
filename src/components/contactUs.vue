@@ -10,7 +10,7 @@
           <div class="telephone">
             <svg width="32" height="32" class="sg0"><use xlink:href="#svg-bsi-telephone"></use></svg>
             <h5 class="sg1">电话</h5>
-            <span class="sg2">xxx</span>
+            <strong class="sg2">6018856</strong>
           </div>
         </div>
       </div>
@@ -19,7 +19,8 @@
           <div class="email">
             <svg width="32" height="32" class="sg0"><use xlink:href="#svg-bsi-envelope-at"></use></svg>
             <h5 class="sg1">电子邮箱</h5>
-            <span class="sg2">service@changd.cn</span>
+            <strong class="sg2">69746125@qq.com</strong>
+            <span class="sg3">hagnimik@outlook.com</span>
           </div>
         </div>
       </div>
@@ -47,6 +48,7 @@
   grid-template-areas:
     "sg0 sg1"
     "sg0 sg2"
+    "sg0 sg3"
 ;
 }
 .sg0{
@@ -57,5 +59,8 @@
 }
 .sg2{
   grid-area: sg2;
+}
+.sg3{
+  grid-area: sg3;
 }
 </style>
